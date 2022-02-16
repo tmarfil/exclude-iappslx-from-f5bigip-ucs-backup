@@ -1,6 +1,6 @@
 # Exclude iApps LX packages from F5 BigIP UCS backups for faster backups
 
-You can decrease the time it takes to complete an F5 BigIP UCS backup by excluding the iApps LX packages (Application Services Extension 3, etc) from UCS backups.
+You can decrease the time it takes to complete an F5 BigIP UCS backup, by excluding the iApps LX packages (Application Services Extension 3, etc) from UCS backups.
 
 In my testing, excluding the iAppx LX packages did not affect the integrity of backup and restore files, though you have to take an extra step during restore to manually re-install the iApps LX packages: https://support.f5.com/csp/article/K89634428
 
@@ -19,7 +19,7 @@ user    0m7.524s
 sys     0m7.287s
 ```
 
-## iApps LX Packages _excluded_ from UCS backups
+## iApps LX packages _excluded_ from UCS backups
 
 And here is the same test with iApps LX packages excluded.
 
