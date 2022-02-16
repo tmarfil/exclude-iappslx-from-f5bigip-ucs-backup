@@ -39,7 +39,7 @@ Run the script on a BigIP.
 ...or to run in the background and use minimum resources:
 
 ```
-nice -n 20 ./bin/exclude-iappslx.sh &
+nice -n 20 ./exclude-iappslx.sh &
 ```
 ```
 Remounted /var as read-write.
