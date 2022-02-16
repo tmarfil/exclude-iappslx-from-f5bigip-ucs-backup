@@ -19,7 +19,7 @@ user    0m7.524s
 sys     0m7.287s
 ```
 
-## iApps LX packages _excluded_ from UCS backups
+## iApps LX packages _excluded_ from UCS backup
 
 And here is the same test with iApps LX packages excluded.
 
