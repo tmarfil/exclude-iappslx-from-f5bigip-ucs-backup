@@ -7,9 +7,9 @@ BACKUPDIR="/var/local/ucs"
 # record current version of as3.
 AS3_VERSION=$(curl -s -u admin:fakepass http://localhost:8100/mgmt/shared/appsvcs/info | jq -r '.version')
 
-# remount /user as rw:
+# remount /usr as rw:
 mount -o remount,rw /usr/
-echo Remounted /var as read-write.
+echo Remounted /usr as read-write.
 
 cd ${BACKUPDIR}
 
@@ -27,12 +27,12 @@ cat ${FILE} | grep '2605\|2606'
 
 # remount /usr as ro:
 mount -o remount,ro /usr/
-echo Remounted /var as read-only.
+echo Remounted /usr as read-only.
 
-cd $ORIGINALDIR
+cd ${ORIGINALDIR}
 
 # UCS backup. The backup name shows:
 # - Device hostname
 # - Backup timestamp
 # - AS3 version running at time of backup. During restore you will have to manually re-install the iControl LX extensions including AS3.
-time tmsh save sys ucs $(echo $HOSTNAME | cut -d'.' -f1)-$(date +%H%M-%m%d%y)-$AS3_VERSION
+time tmsh save sys ucs $(echo $HOSTNAME | cut -d'.' -f1)-$(date +%H%M-%m%d%y)-${AS3_VERSION}
