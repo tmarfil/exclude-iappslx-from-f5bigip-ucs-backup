@@ -8,7 +8,7 @@ The exclude-iappslx.sh script will ensure the iApps LX packages are excluded fro
 
 ## iApps LX packages _included_ in UCS backup
 
-Here is a test on a BigIP 16.1.2.1 Virtual Edition, with a minimum config, and all iApps LX packages enabled.
+Here is a test on a BigIP 16.1.2.1 Virtual Edition, with a minimal config, and all iApps LX packages enabled.
 
 ```
 time tmsh save sys ucs $(echo $HOSTNAME | cut -d'.' -f1)-$(date +%H%M-%m%d%y)
@@ -36,7 +36,7 @@ Run the script on a BigIP.
 ./exclude-iappslx.sh
 ```
 
-...or to run in the background and use minimum resources:
+...or to run in the background and use minimal resources:
 
 ```
 nice -n 20 ./exclude-iappslx.sh &
