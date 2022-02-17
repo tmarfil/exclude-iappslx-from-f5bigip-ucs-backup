@@ -42,14 +42,14 @@ Run the script on a BigIP.
 nice -n 20 ./exclude-iappslx.sh &
 ```
 ```
-Remounted /var as read-write.
+Remounted /usr as read-write.
 Current cs.dat file backed up to /var/local/ucs.
 Below are the edits made to the iAppsLX section of cs.dat.
 #save.2605.save_pre     = iAppsLX_save_pre.sh
 #save.2605.dir_opt      = /var/config/rest/iapps/RPMS.save
 #save.2605.save_post    = (rm -rf /var/config/rest/iapps/RPMS.save)
 #save.2606.file         = /var/config/rest/iapps/disable
-Remounted /var as read-only.
+Remounted /usr as read-only.
 Saving active configuration...
 /var/local/ucs/bigip1-cis-gcp-1402-021622-3.32.1.ucs is saved.
 
